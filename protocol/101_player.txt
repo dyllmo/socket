@@ -1,0 +1,50 @@
+player = 101
+{
+    //玩家登录,登陆之后取get_player_info,如果nickname为空,则需要player_first_init
+    login = 10101
+    {
+        in {
+            player_name : string        //玩家名称
+            hash_code   : long        //验证码(md5(player_name+time))
+            time        : int           //登录时间戳的字符串
+            source      : string        //来源
+            stage       : byte          //平台(0-无,1-创星,2-北京开开眼,3-北京国汇,4-北京乐游)
+            token       : string        //平台token
+        }
+
+        out {
+            result : string 
+            player_id   : long          //玩家ID
+            is_minor_account : string   //是否未成年人账号
+            enable_time : int           //被屏蔽账号的恢复时间（时间戳）
+        }
+    }
+    //改变玩家名称
+    change_player_name = 10116
+    {
+        in {
+            new_name                    : string    //新的名称
+			player_specs 				: list{
+                player_item_id          : int       // 玩家物品ID
+                item_id                 : int       // 物品模板ID
+                number                  : string       // 总数量
+            }
+        }
+
+        out {
+            result : enum{
+                SUCCESS
+                SHIELD
+                NOT_ENOUGH_INGOT
+                FAILED
+            }
+            player_item_list : list{
+                player_item_id          : int       // 玩家物品ID
+                item_id                 : int       // 物品模板ID
+                number                  : int       // 总数量
+            }
+        }
+    }
+
+
+}

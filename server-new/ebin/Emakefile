@@ -1,0 +1,12 @@
+{[
+	'../src/*',
+	'../src/*/*',
+	'../src/*/*/*',
+	'../src/*/*/*/*'
+],[
+	debug_info,
+	{d, debug},
+	{d, branch_cn},
+	{outdir, "./"},
+	{i, "../include"}
+]}.

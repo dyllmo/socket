@@ -1,0 +1,1 @@
+-define(SUCCESS,0).-define(SHIELD,1).-define(NOT_ENOUGH_INGOT,2).-define(FAILED,3).

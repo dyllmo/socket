@@ -1,0 +1,1 @@
+//----Do not modify the automatically generated----//using System;using System.Collections;namespace ProtocolTool{public class api_player_hrl {        public enum ID {            SUCCESS,            SHIELD,            NOT_ENOUGH_INGOT,            FAILED,        }    }        public int player_item_id;        public int item_id;        public int number;    } }
