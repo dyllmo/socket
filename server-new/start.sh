@@ -4,7 +4,7 @@ erl                                                 \
 -boot            start_sasl                         \
 -pa              ebin                            	\
 -s               game start                         \
--name            gate@127.0.0.1                     \
+-name            socket@127.0.0.1                     \
 -setcookie       the_cookie                         \
 -config          start_config/start_game            \
 -env             ERL_MAX_ETS_TABLES 65535           \
